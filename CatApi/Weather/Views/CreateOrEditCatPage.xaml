@@ -1,0 +1,35 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatApi.Views.CreateOrEditCatPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Имя кота:" />
+            
+            <Entry Placeholder="Имя"
+                   Text="{Binding Name}"/>
+            
+            <Label Text="Цвет кота" />
+            
+            <Entry Placeholder="Цвет"
+                   Text="{Binding Color}"/>
+            
+            <Switch IsToggled="{Binding Gender}" />
+            
+            <Button x:Name="SaveBtn"
+                    Clicked="SaveBtn_Clicked" 
+                    Text="Сохранить" />
+            
+            <Button  x:Name="DeleteBtn"
+                     Clicked="DeleteBtn_Clicked" 
+                     Text="Удалить" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
